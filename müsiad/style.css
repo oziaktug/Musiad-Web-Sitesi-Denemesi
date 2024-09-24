@@ -1,0 +1,424 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    padding-left: 200px;
+    background-color: #f8f9fa; 
+    
+}
+
+.horizontal-menu {
+    display: flex;
+    align-items: center; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; 
+    flex-wrap: wrap;
+}
+
+.horizontal-menu .nav-item {
+    margin: 0 15px; 
+}
+.horizontal-menu .nav-link {
+    color: #808080; 
+    font-weight: normal; 
+    padding: 10px 15px;
+    text-decoration: none; 
+    display: inline-flex; 
+    align-items: center;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Hover geçiş süresi */
+}
+
+.horizontal-menu .nav-link:hover {
+    color:#8b7500;    
+    background-color: transparent; /* Arka plan rengini kaldırır */
+    font-weight: bold; /* Üzerine gelindiğinde yazıları kalın yapar */
+}
+
+.social-icons a {
+    color: #808080; /* İkonların gri rengi */
+    font-size: 30px; /* İkon boyutu */
+    margin: 0 10px; /* İkonlar arasında yatay boşluk bırakır */
+    text-decoration: none; /* Alt çizgi kaldırır */
+    transition: color 0.3s ease; /* Hover geçiş süresi */
+}
+
+.social-icons a:hover {
+    color:#8b7500;    
+}
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    height: 890px; /* Slider yüksekliği */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    top: 300px;
+    left: 20%;
+    transform: translate(-30%, -20%);
+    color: #fff;
+    padding-left: 120px;
+    font-size: 100px;
+    text-align: left;
+    width: 80%;
+    box-sizing: border-box;
+}
+.caption2 { 
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-40%, -20%);
+    padding-left: 120px;
+    font-size: 20px; 
+    text-align: left; 
+    width: 80%;
+    box-sizing: border-box;
+}
+.caption2 a {
+    position: relative;
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    padding-right: 5px;
+}
+.caption2 a:hover {
+    color: #0056b3;
+    transform: scale(1.1); 
+}
+button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+    font-size: 24px;
+    transform: translateY(-50%);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.yazi1 {
+    padding: 50px 0;
+}
+
+.yazi1 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    color:#8b7500;
+    font-size: 40px;
+}
+.col-md-6 {
+    text-align: center;
+    color: gray;
+    font-size: 22px;
+
+}
+.col-md-6 h2{
+    text-align: center;
+    color: #8b7500;
+    font-size: 40px;
+    font-weight: bold;
+}
+.content-section .row {
+    display: flex;
+    align-items: center; /* Dikey ortalama */
+    justify-content: space-between; /* Alanı eşit dağıtır */
+}
+
+.content-section .col-md-6 img {
+    width: 100%; /* Görselin genişliğini kapsayıcıya göre ayarlar */
+    max-width: 1000px; /* Maksimum genişlik, ihtiyaca göre ayarla */
+    height: auto; /* Oranı korur */
+}
+.saydam {
+    position: relative; /* Pseudo-elementin pozisyonunu ayarlamak için gerekli */
+    width: 100%; /* Div genişliği ekranın tamamını kaplar */
+    height: 100%; /* Div yüksekliği ekran yüksekliğinin tamamını kaplar */
+    display: flex; /* İçeriği merkezlemek için flexbox kullanımı */
+    align-items: center; /* Dikey merkezleme */
+    justify-content: center; /* Yatay merkezleme */
+    overflow: hidden; /* Görselin taşmasını engeller */
+    background-color: white;
+
+}
+
+.saydam img {
+    max-width: 100%; /* Görselin genişliğini %100'e kadar sınırlar */
+    max-height: 100%; /* Görselin yüksekliğini %100'e kadar sınırlar */
+    object-fit: cover; /* Görselin orantısını koruyarak sığmasını sağlar */
+    display: block; /* Görselin altındaki boşluğu kaldırır */
+}
+
+.saydam::before {
+    content: ""; /* Pseudo-element içeriği */
+    position: absolute; /* Pozisyonlandırma */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Siyah ve %50 opasite */
+    z-index: 1; /* Görselin üstüne gelir */
+}
+.overlay {
+    position: absolute; /* Overlay'in konumlandırılması */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* İçeriği merkezlemek için flexbox kullanımı */
+    flex-direction: column; /* İçeriği dikey olarak düzenler */
+    align-items: center; /* Dikey merkezleme */
+    justify-content: center; /* Yatay merkezleme */
+    padding: 2rem; /* İçeriğe boşluk ekler */
+    color: white; /* Genel yazı rengi */
+}
+
+.text {
+    font-size: 40px; /* Ana başlığın boyutu */
+    color:#ffd905;
+    text-align: center; /* Yazıyı ortalar */
+    margin-bottom: 1rem; /* Altındaki yazıya boşluk bırakır */
+}
+
+.text2 {
+    font-size: 18px; /* Alt açıklamanın boyutu */
+    color: white; /* Alt açıklamanın rengi */
+    text-align: center; /* Yazıyı ortalar */
+    max-width: 80%; /* Yazının genişliğini sınırlar */
+}
+.yazi3 h2{
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color:#8b7500;
+
+
+}
+.yazi3 p{
+    text-align:center;
+    padding-left: 25%;
+    padding-right: 25%;
+    color: gray;
+    font-size: 20px;
+}
+.slider-container2 {
+    width: 100%; /* Slider genişliği ekran genişliğine eşit */
+    overflow: hidden;
+    position: relative;
+    border: 1px solid gray; /* Slider kapsayıcısına border ekleyin */
+    border-radius: 8px; /* Border köşelerini yuvarlatmak için */
+}
+
+.slider2 {
+    display: flex;
+    animation: scroll2 40s linear infinite;
+}
+
+.slide2 {
+    width: 160px; /* Her görselin genişliği */
+    height: 60px; /* Her görselin yüksekliği */
+    padding: 5px; /* Görseller arasındaki boşluk */
+}
+
+.slide2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Auto-slide animasyonu */
+@keyframes scroll2 {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); } /* İçeriğin tam olarak kaymasını sağlar */
+}
+.insta{
+    text-align: center;
+}
+.insta a {
+    display: inline-flex;
+    align-items: center;
+    background-color: #8b7500;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    padding-left: 5px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.insta a:hover {
+    background-color:#6d5d03;
+    box-shadow: 0 4px 8px rgba(1, 0, 0, 0);
+}
+.insta i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+.container2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.line {
+    width: 500px;
+    border-top: 3px solid #6d5d03; 
+}
+.ads-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ads-container {
+    display: flex;
+    gap: 20px;
+}
+
+.ad {
+    width: 200px;
+    text-align: center;
+}
+
+.ad-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ad-description {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+.ad a{
+    text-decoration: none;
+    color:#8b7500;
+    font-weight: bold;
+    font-size: 18px;
+}
+.box {
+    width: 100%;
+    height: 250px;
+    border: 1px solid black; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.boxic {
+    margin-bottom: 10px;
+}
+
+.boxic img {
+    max-width: 100%;
+    max-height: 200px;
+    height: auto;
+    width: auto;
+}
+
+.cpr {
+    font-size: 14px;
+    color: #8b7500 ;
+}
+.container3 {
+    display: flex; /* Çocuk elemanları yatayda hizalamak için */
+    justify-content: space-between; /* Metinleri iki uca hizalar */
+    padding: 20px;
+    box-sizing: border-box; /* Padding ve border'ı genişliğe dahil eder */
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.cerez .yapimci {
+    font-size: 24px;
+    text-decoration: none;
+}
+.yapimci a{
+    text-decoration: none;
+    color: #6d5d03;
+}
+.yukari a{
+    text-decoration:none;
+
+}
+#scrollToTopBtn {
+    position: fixed; /* Sabit pozisyon */
+    bottom: 20px; /* Alt kenardan 20px uzaklıkta */
+    right: 20px; /* Sağ kenardan 20px uzaklıkta */
+    background-color: #8b7500; /* Arka plan rengi */
+    color: white; /* Yazı rengi */
+    border: none; /* Kenarlık yok */
+    border-radius: 50%; /* Yuvarlak buton */
+    width: 50px; /* Buton genişliği */
+    height: 50px; /* Buton yüksekliği */
+    font-size: 24px; /* Sembol boyutu */
+    display: flex; /* İçeriği merkezlemek için flexbox */
+    align-items: center; /* Yatayda ortalamak için */
+    justify-content: center; /* Dikeyde ortalamak için */
+    cursor: pointer; /* İmleci işaretçi yapar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge efekti */
+    opacity: 0.8; /* Şeffaflık */
+    transition: opacity 0.3s, background-color 0.3s; /* Hover efekti */
+}
